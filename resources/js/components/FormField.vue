@@ -24,10 +24,13 @@ export default {
 
     props: ['resourceName', 'resourceId', 'field'],
 
+    data() {
+        return {
+            editor: null
+        };
+    },
+
     methods: {
-        /*
-             * Set the initial, internal value for the field.
-             */
         setInitialValue() {
             this.value = this.field.value;
 
@@ -38,71 +41,60 @@ export default {
                 : JSON.parse(self.field.value);
 
             const editor = NovaEditorJS.getInstance({
-                /**
-                 * Wrapper of Editor
-                 */
                 holder: `editor-js-${self.field.attribute}`,
-
-                /**
-                 * This Tool will be used as default
-                 */
                 defaultBlock: self.field.editorSettings.initialBlock,
-
-                /**
-                 * Default placeholder
-                 */
                 placeholder: self.field.editorSettings.placeholder,
-
-                /**
-                 * Enable autofocus
-                 */
                 autofocus: self.field.editorSettings.autofocus,
-
-                /**
-                 * Internalization config
-                 */
                 i18n: {
-                    /**
-                     * Text direction. If not set, uses ltr
-                     */
                     direction: (self.field.editorSettings.rtl ?? false) ? 'rtl' : 'ltr',
                 },
-
-                /**
-                 * Initial Editor data
-                 */
                 data: currentContent,
-
-                /**
-                 * Min height of editor
-                 */
                 minHeight: 35,
 
                 onReady() {
-
+                    self.editor = editor;
+                    self.$emit('editor-js-ready', editor);
                 },
                 onChange() {
                     editor.save().then((savedData) => {
                         self.handleChange(savedData);
+                        self.$emit('editor-js-change', savedData);
                     });
                 },
             }, self.field);
+            
+            this.editor = editor;
         },
 
-        /**
-         * Fill the given FormData object with the field's internal value.
-         */
         fill(formData) {
-            const value = typeof this.value === 'string' ? this.value : JSON.stringify(this.value);
-            formData.append(this.field.attribute, value || '');
+            if (this.editor) {
+                this.editor.save().then((savedData) => {
+                    const value = typeof savedData === 'string' ? savedData : JSON.stringify(savedData);
+                    formData.append(this.field.attribute, value || '');
+                });
+            } else {
+                const value = typeof this.value === 'string' ? this.value : JSON.stringify(this.value);
+                formData.append(this.field.attribute, value || '');
+            }
         },
 
-        /**
-         * Update the field's internal value.
-         */
         handleChange(value) {
             this.value = JSON.stringify(value);
         },
+
+        getEditorData() {
+            return new Promise((resolve) => {
+                if (this.editor) {
+                    this.editor.save().then(resolve);
+                } else {
+                    resolve(this.value);
+                }
+            });
+        },
+
+        getEditorInstance() {
+            return this.editor;
+        }
     },
 };
 </script>

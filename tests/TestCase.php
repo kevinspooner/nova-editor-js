@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Advoor\NovaEditorJs\FieldServiceProvider;
+use KevinSpooner\NovaEditorJs\FieldServiceProvider;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Tests\Fixtures\TestServiceProvider;

@@ -95,7 +95,7 @@ _CSS classes taken from [here](https://github.com/editor-js/warning/blob/master/
 `app/Providers/NovaServiceProvider.php`
 
 ```php
-use Advoor\NovaEditorJs\NovaEditorJs;
+use KevinSpooner\NovaEditorJs\NovaEditorJs;
 
 // ...
 public function boot()

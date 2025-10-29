@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Advoor\NovaEditorJs\Http\Controllers;
+namespace KevinSpooner\NovaEditorJs\Http\Controllers;
 
 use DOMDocument;
 use Illuminate\Http\Client\ConnectionException;

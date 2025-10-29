@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Http\Controllers;
 
-use Advoor\NovaEditorJs\Events\EditorJsImageUploaded;
-use Advoor\NovaEditorJs\Events\EditorJsThumbnailCreated;
-use Advoor\NovaEditorJs\Http\Controllers\EditorJsImageUploadController;
+use KevinSpooner\NovaEditorJs\Events\EditorJsImageUploaded;
+use KevinSpooner\NovaEditorJs\Events\EditorJsThumbnailCreated;
+use KevinSpooner\NovaEditorJs\Http\Controllers\EditorJsImageUploadController;
 use finfo;
 use Illuminate\Http\Response;
 use Illuminate\Http\UploadedFile;

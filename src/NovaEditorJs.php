@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Advoor\NovaEditorJs;
+namespace KevinSpooner\NovaEditorJs;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -25,11 +25,11 @@ class NovaEditorJs extends Facade
     }
 
     /**
-     * @deprecated since 3.0, use \Advoor\NovaEditorJs\NovaEditorJsField::make
+     * @deprecated since 3.0, use \KevinSpooner\NovaEditorJs\NovaEditorJsField::make
      */
     public static function make(mixed $name, $attribute = null, $resolveCallback = null)
     {
-        trigger_deprecation('advoor/nova-editor-js', '3.0', 'NovaEditorJs has been converted to a Facade, use NovaEditorJsField::make instead');
+        trigger_deprecation('kevinspooner/nova-editor-js', '3.0', 'NovaEditorJs has been converted to a Facade, use NovaEditorJsField::make instead');
 
         return NovaEditorJsField::make($name, $attribute, $resolveCallback);
     }

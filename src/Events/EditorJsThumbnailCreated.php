@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Advoor\NovaEditorJs\Events;
+namespace KevinSpooner\NovaEditorJs\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 

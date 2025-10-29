@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use Advoor\NovaEditorJs\NovaEditorJsCast;
-use Advoor\NovaEditorJs\NovaEditorJsData;
+use KevinSpooner\NovaEditorJs\NovaEditorJsCast;
+use KevinSpooner\NovaEditorJs\NovaEditorJsData;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\DB;
 use Tests\Fixtures\Models\Dummy;

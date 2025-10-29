@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Advoor\NovaEditorJs\Http\Controllers;
+namespace KevinSpooner\NovaEditorJs\Http\Controllers;
 
-use Advoor\NovaEditorJs\Events\EditorJsImageUploaded;
-use Advoor\NovaEditorJs\Events\EditorJsThumbnailCreated;
+use KevinSpooner\NovaEditorJs\Events\EditorJsImageUploaded;
+use KevinSpooner\NovaEditorJs\Events\EditorJsThumbnailCreated;
 use finfo;
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\RequestException;

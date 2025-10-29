@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Feature\Http\Controllers;
 
-use Advoor\NovaEditorJs\Http\Controllers\EditorJsLinkController;
+use KevinSpooner\NovaEditorJs\Http\Controllers\EditorJsLinkController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use Tests\TestCase;

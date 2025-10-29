@@ -25,7 +25,10 @@
         "@editorjs/marker": "^1.2.2",
         "@editorjs/paragraph": "^2.8.0",
         "@editorjs/raw": "^2.3.1",
-        "@editorjs/table": "^2.0.2"
+        "@editorjs/table": "^2.0.2",
+        "axios": "^1.13.1",
+        "uid": "^2.0.2",
+        "vuex": "^4.1.0"
     },
     "devDependencies": {
         "@vue/compiler-sfc": "^3.2.36",

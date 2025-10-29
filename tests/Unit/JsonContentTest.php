@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use Advoor\NovaEditorJs\NovaEditorJs;
+use KevinSpooner\NovaEditorJs\NovaEditorJs;
 use Tests\TestCase;
 
 class JsonContentTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Advoor\NovaEditorJs;
+namespace KevinSpooner\NovaEditorJs;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Arr;

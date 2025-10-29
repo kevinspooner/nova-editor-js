@@ -1,23 +1,25 @@
 # Laravel Nova Editor JS Field
 
-[![Latest Version on Github](https://img.shields.io/github/release/advoor/nova-editor-js.svg?style=flat-square)](https://packagist.org/packages/advoor/nova-editor-js)
-[![Total Downloads](https://img.shields.io/packagist/dt/advoor/nova-editor-js.svg?style=flat-square)](https://packagist.org/packages/advoor/nova-editor-js)
+[![Latest Version on Github](https://img.shields.io/github/release/kevinspooner/nova-editor-js.svg?style=flat-square)](https://packagist.org/packages/kevinspooner/nova-editor-js)
+[![Total Downloads](https://img.shields.io/packagist/dt/kevinspooner/nova-editor-js.svg?style=flat-square)](https://packagist.org/packages/kevinspooner/nova-editor-js)
 
 A Laravel Nova implementation of [Editor.js](https://github.com/codex-team/editor.js)
-by [@advoor](https://github.com/advoor).
+by [@kevinspooner](https://github.com/kevinspooner).
+
+> **Fork of [advoor/nova-editor-js](https://github.com/advoor/nova-editor-js)** - Original work by [@advoor](https://github.com/advoor)
 
 ## Installation
 
 Install via composer:
 
 ```
-composer require advoor/nova-editor-js
+composer require kevinspooner/nova-editor-js
 ```
 
 Publish the config file
 
 ```
-php artisan vendor:publish --provider="Advoor\NovaEditorJs\FieldServiceProvider"
+php artisan vendor:publish --provider="KevinSpooner\NovaEditorJs\FieldServiceProvider"
 ```
 
 ## Version Compatibility
@@ -51,7 +53,7 @@ and providing the user with the EditorJS field.
 To use it, simply import the field,
 
 ```php
-use Advoor\NovaEditorJs\NovaEditorJsField;
+use KevinSpooner\NovaEditorJs\NovaEditorJsField;
 ```
 
 use it in your fields array,
@@ -72,7 +74,7 @@ This will map the value to a `NovaEditorJsData` model, which can be returned in 
 via API calls (rendering JSON, unless you call `toHtml` on it or cast it to a string).
 
 ```php
-use Advoor\NovaEditorJs\NovaEditorJsCast;
+use KevinSpooner\NovaEditorJs\NovaEditorJsCast;
 
 class User extends Model {
     protected $casts = [

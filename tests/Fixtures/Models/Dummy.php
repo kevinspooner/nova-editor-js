@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tests\Fixtures\Models;
 
-use Advoor\NovaEditorJs\NovaEditorJsCast;
-use Advoor\NovaEditorJs\NovaEditorJsData;
+use KevinSpooner\NovaEditorJs\NovaEditorJsCast;
+use KevinSpooner\NovaEditorJs\NovaEditorJsData;
 use Illuminate\Database\Eloquent\Model;
 
 /**
