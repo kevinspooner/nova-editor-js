@@ -26,6 +26,7 @@ return [
             'activated' => true,
             'inlineToolbar' => true,
             'shortcut' => 'CMD+SHIFT+L',
+            'nested' => true, // Enable nested lists support
         ],
         'code' => [
             'activated' => true,
@@ -150,10 +151,11 @@ return [
                 ],
                 'items' => [
                     'type' => 'array',
+                    // Support both old format (array of strings) and new format (array of objects with nested items)
                     'data' => [
                         '-' => [
                             'type' => 'string',
-                            'allowedTags' => 'i,b,u',
+                            'allowedTags' => 'i,b,u,a[href],span[class],code[class],mark[class]',
                         ],
                     ],
                 ],
